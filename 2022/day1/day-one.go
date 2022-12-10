@@ -20,7 +20,7 @@ func main() {
 	contents := string(bytes)
 	split := strings.Split(contents, "\n")
 
-	// part A
+	// First Part
 	var highest int
 	var current int
 	for _, s := range split {
@@ -38,7 +38,7 @@ func main() {
 	}
 	fmt.Println(highest)
 
-	// part B
+	// Second Part
 	var found []int
 	current = 0
 	for _, s := range split {
