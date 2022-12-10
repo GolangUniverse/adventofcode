@@ -67,4 +67,52 @@ func main() {
 	}
 	fmt.Println(score)
 
+	// Second Part
+	score = 0
+	for _, s := range split {
+		if s == "" {
+			break
+		}
+		vals := strings.Split(s, " ")
+		opp := vals[0]
+		outcome := vals[1]
+		switch outcome {
+		case "X":
+			score += 0
+		case "Y":
+			score += 3
+		case "Z":
+			score += 6
+		}
+		switch opp {
+		case "A":
+			switch outcome {
+			case "X":
+				score += 3
+			case "Y":
+				score += 1
+			case "Z":
+				score += 2
+			}
+		case "B":
+			switch outcome {
+			case "X":
+				score += 1
+			case "Y":
+				score += 2
+			case "Z":
+				score += 3
+			}
+		case "C":
+			switch outcome {
+			case "X":
+				score += 2
+			case "Y":
+				score += 3
+			case "Z":
+				score += 1
+			}
+		}
+	}
+	fmt.Println(score)
 }
