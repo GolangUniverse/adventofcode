@@ -18,7 +18,7 @@ func main() {
 	contents := string(bytes)
 	split := strings.Split(contents, "\n")
 
-	// part A
+	// First Part
 	var priorities int
 	for _, s := range split {
 		if s == "" {
@@ -32,6 +32,33 @@ func main() {
 		}
 		for _, k := range second {
 			if inFirst[k] {
+				if k >= 'a' && k <= 'z' {
+					priorities += int(k-'a') + 1
+				} else {
+					priorities += int(k-'A') + 27
+				}
+				break
+			}
+		}
+	}
+	fmt.Println(priorities)
+
+	// Second Part
+	priorities = 0
+	for i := 0; i < len(split)-1; i += 3 {
+		found := make(map[rune]int)
+		for j := 0; j < 3; j++ {
+			local := make(map[rune]bool)
+			for _, k := range split[i+j] {
+				if local[k] {
+					continue
+				}
+				local[k] = true
+				found[k]++
+			}
+		}
+		for k, v := range found {
+			if v == 3 {
 				if k >= 'a' && k <= 'z' {
 					priorities += int(k-'a') + 1
 				} else {
