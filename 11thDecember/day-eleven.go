@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var inputFile = flag.String("inputFile", "day11/input.txt", "Relative file path to use as input.")
+var inputFile = flag.String("inputFile", "11thDecember/input.txt", "Relative file path to use as input.")
 
 type monkey struct {
 	items    []int

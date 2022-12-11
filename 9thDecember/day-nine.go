@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var inputFile = flag.String("inputFile", "day9/input.txt", "Relative file path to use as input.")
+var inputFile = flag.String("inputFile", "9thDecember/input.txt", "Relative file path to use as input.")
 
 type coord struct {
 	x, y int

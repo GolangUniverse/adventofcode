@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var inputFile = flag.String("inputFile", "inputs/day08.input", "Relative file path to use as input.")
+var inputFile = flag.String("inputFile", "8thDecember/input.txt", "Relative file path to use as input.")
 
 type tree struct {
 	height  int

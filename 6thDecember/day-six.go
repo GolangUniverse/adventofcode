@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 )
 
-var inputFile = flag.String("inputFile", "day6/input.txt", "Relative file path to use as input.")
+var inputFile = flag.String("inputFile", "6thDecember/input.txt", "Relative file path to use as input.")
 
 func main() {
 	flag.Parse()

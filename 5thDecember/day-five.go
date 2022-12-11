@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var inputFile = flag.String("inputFile", "day5/input.txt", "Relative file path to use as input.")
+var inputFile = flag.String("inputFile", "5thDecember/input.txt", "Relative file path to use as input.")
 
 type stacks [][]byte
 

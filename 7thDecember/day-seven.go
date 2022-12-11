@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var inputFile = flag.String("inputFile", "day7/input.txt", "Relative file path to use as input.")
+var inputFile = flag.String("inputFile", "7thDecember/input.txt", "Relative file path to use as input.")
 
 type dir struct {
 	parent   *dir
