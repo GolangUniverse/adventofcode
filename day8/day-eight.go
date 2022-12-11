@@ -85,7 +85,46 @@ func main() {
 	}
 	fmt.Println(total)
 
-	
+	// Second Part
+	var best int
+	for r := 0; r < len(grid); r++ {
+		for c := 0; c < len(grid); c++ {
+			self := grid[r][c].height
+
+			highest := -1
+			var left, right, up, down int
+			for x := c + 1; x < len(grid); x++ {
+				grid.check(x, r, &highest)
+				if highest >= self || x == len(grid)-1 {
+					right = x - c
+					break
+				}
+			}
+			highest = -1
+			for x := c - 1; x >= 0; x-- {
+				grid.check(x, r, &highest)
+				if highest >= self || x == 0 {
+					left = c - x
+					break
+				}
+			}
+			highest = -1
+			for y := r + 1; y < len(grid); y++ {
+				grid.check(c, y, &highest)
+				if highest >= self || y == len(grid)-1 {
+					down = y - r
+					break
+				}
+			}
+			highest = -1
+			for y := r - 1; y >= 0; y-- {
+				grid.check(c, y, &highest)
+				if highest >= self || y == 0 {
+					up = r - y
+					break
+				}
+			}
+
 			// Compute the score.
 			score := up * down * left * right
 			if score > best {
