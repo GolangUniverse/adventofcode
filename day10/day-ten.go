@@ -50,10 +50,10 @@ func main() {
 		}
 	}
 
-	// part A
+	// First Part
 	fmt.Println(strength)
 
-	// part B
+	// Second Part
 	for i, v := range pixels {
 		if v {
 			fmt.Printf("#")
