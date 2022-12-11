@@ -75,7 +75,7 @@ func main() {
 		}
 	}
 
-	// part A
+	// First Part
 	var total int
 	root.walk(func(d dir) {
 		if d.size <= 100000 {
@@ -84,4 +84,14 @@ func main() {
 	})
 	fmt.Println(total)
 
+	// Second Part
+	var smallest int
+	root.walk(func(d dir) {
+		if root.size-d.size < 70000000-30000000 {
+			if smallest == 0 || d.size < smallest {
+				smallest = d.size
+			}
+		}
+	})
+	fmt.Println(smallest)
 }
