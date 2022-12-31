@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var inputFile = flag.String("inputFile", "inputs/day19.input", "Relative file path to use as input.")
+var inputFile = flag.String("inputFile", "19thDecember/input.txt", "Relative file path to use as input.")
 var debug = flag.Bool("debug", false, "Whether to print debug output & progress.")
 
 type resource int
@@ -125,7 +125,7 @@ func main() {
 		recipes = append(recipes, bp)
 	}
 
-	// part A
+	// Fisrt Part
 	var total int
 	for i, bp := range recipes {
 		best := bp.findBest(24)
@@ -136,7 +136,7 @@ func main() {
 	}
 	fmt.Println(total)
 
-	// part B
+	// Second Part
 	product := 1
 	for i := 0; i < 3; i++ {
 		best := recipes[i].findBest(32)
