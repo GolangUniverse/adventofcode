@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-var inputFile = flag.String("inputFile", "inputs/day17.input", "Relative file path to use as input.")
+var inputFile = flag.String("inputFile", "17thDecember/input.txt", "Relative file path to use as input.")
 
 const width = 7
 
@@ -92,9 +92,9 @@ func main() {
 		{{0, 0}, {1, 0}, {1, 1}, {0, 1}},
 	}}
 
-	// part A
+	// First Part
 	fmt.Println(simulate(shapes, moves, 2022))
-	// part B
+	// Second Part
 	fmt.Println(simulate(shapes, moves, 1000000000000))
 }
 
