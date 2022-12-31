@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-var inputFile = flag.String("inputFile", "inputs/day20.input", "Relative file path to use as input.")
+var inputFile = flag.String("inputFile", "20thDecember/input.txt", "Relative file path to use as input.")
 
 const key = 811589153
 
@@ -23,9 +23,9 @@ func main() {
 	input := strings.Split(contents, "\n")
 	input = input[:len(input)-1]
 
-	// Part A
+	// First Part
 	fmt.Println(run(input, 1, 1))
-	// Part B
+	// Second Part
 	fmt.Println(run(input, key, 10))
 }
 
