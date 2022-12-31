@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-var inputFile = flag.String("inputFile", "inputs/day25.input", "Relative file path to use as input.")
+var inputFile = flag.String("inputFile", "25thDecember/input.txt", "Relative file path to use as input.")
 
 func main() {
 	flag.Parse()
